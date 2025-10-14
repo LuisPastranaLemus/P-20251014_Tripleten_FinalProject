@@ -74,8 +74,61 @@ Key questions:
 
 ---
 
+2️⃣ A/B Testing – You've received an analytical task from an international online store. Your predecessors failed to complete it: they launched an A/B test and then abandoned it (to start a watermelon farm in Brazil). They left only the technical specifications and test results.
 
+🧮 Technical Description
 
+- Test name: `recommender_system_test`
+- Groups: A (control), B (new checkout funnel)
+- Launch date: 2020-12-07
+- Date new users stopped being accepted: 2020-12-21
+- End date: 2021-01-01
+- Audience: 15% of new users from the EU region
+- Test purpose: To test changes related to the introduction of an improved recommendation system
+- Expected outcome: Within 14 days of enrollment, users will show improved conversion rates for product page views (the `product_page` event), adding items to cart (`product_card`), and purchases (`purchase`). At each stage of the `product_page → product_card → purchase` funnel, there will be at least a 10% increase.
+- Expected number of test participants: 6,000
+
+Download the test data, check if it was performed correctly, and analyze the results.
+
+Data
+
+### Data
+
+- ab_project_marketing_events_us.csv
+- final_ab_new_users_upd_us.csv
+- final_ab_events_upd_us.csv
+- final_ab_participants_upd_us.csv
+
+- `ab_project_marketing_events_us.csv`: The marketing events calendar for 2020
+- `final_ab_new_users_upd_us.csv`: All users who registered in the online store from December 7 to 21, 2020
+- `final_ab_events_upd_us.csv`: All new user events from December 7, 2020, to January 1, 2021
+- `final_ab_participants_upd_us.csv`: Table with test participant data
+
+`ab_project_marketing_events_us.csv` structure:
+
+- `name`: The name of the marketing event
+- `regions`: The regions where the advertising campaign will be run
+- `start_dt`: The campaign start date
+- `finish_dt`: Campaign end date
+
+`final_ab_new_users_upd_us.csv` structure:
+
+- `user_id`
+- `first_date`: Registration date
+- `region`
+- `device`: Device used for registration
+
+`final_ab_events_upd_us.csv` structure:
+
+- `user_id`
+- `event_dt`: Date and time of the event
+- `event_name`: Name of the event type
+- `details`: Additional information about the event (e.g., the total order in USD for `purchase` events)
+
+`final_ab_participants_upd_us.csv` structure:
+
+- `user_id`
+- `ab_test`: Test name
 
 ---
 
