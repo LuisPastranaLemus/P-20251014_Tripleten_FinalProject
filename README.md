@@ -1,28 +1,80 @@
 # 🧭 Project Analysis
-Brief Decription
+
+A comprehensive data analysis project divided into three independent case studies designed to demonstrate practical skills in data cleaning, transformation, statistical analysis, and storytelling. It includes a full diagnostic analysis for decision-making, an A/B test evaluation using hypothesis testing, and an SQL case focused on database exploration and business insights.
 
 ---
 
-## 🔍 Project Overview (P-202YMMDD_Name)
+## 🔍 Project Overview (P-20251014_Tripleten_FinalProject)
 
-Project Overview
+1️⃣ Main Case – Diagnostic Analysis and Communication of Results
+
+Application of data cleansing, transformation, and analysis techniques to obtain actionable insights that support business decision-making.
+Includes:
+
+- Task decomposition and definition of the analytical plan.   
+- Complete workflow implementation: loading, processing, visualization, and communication of findings.
+
+2️⃣ A/B Testing – Experimental Analysis and Statistical Validation
+
+Evaluation of the impact of an A/B test through the use of conversion funnels, business metrics, and hypothesis testing.
+Rigorous analysis of the experiment's performance is performed, supported by statistical inference.
+
+3️⃣ SQL Management – ​​Relational Database Querying and Exploration
+
+Exploration of a multi-table database using advanced SQL queries to obtain relevant information, identify patterns, and answer business questions.
+
+🧠 Applied Skills
+
+- Python (pandas, NumPy, matplotlib, seaborn, SciPy)
+- SQL (JOIN queries, CTEs, aggregations, subqueries)
+- Descriptive and inferential statistics
+- Hypothesis testing and A/B analysis
+- Storytelling with data and communicating results
+
+---
+
+1️⃣ Main Case – Telecommunications: Identifying ineffective operators
+
+The virtual phone service CallMeMaybe is developing a new feature that will provide supervisors with insight into the least effective operators. An operator is considered ineffective if it has a high number of missed incoming calls (internal and external) and a long wait time for incoming calls. Furthermore, if an operator is supposed to make outgoing calls, a low number of them will also be a sign of ineffectiveness.
+
+- Conduct exploratory data analysis
+- Identify ineffective operators
+- Test statistical hypotheses
+
+🧮 Data Dictionary
+
+The datasets contain information on the use of the virtual phone service CallMeMaybe. Its customers are organizations that need to distribute a large number of incoming calls among multiple operators or make outgoing calls through their operators. Operators can also make internal calls to communicate with each other. These calls are made through the CallMeMaybe network.
+
+This project has 2 different tables.
+
+- `telecom_dataset_us.csv` (customers' activities data)
+  - `user_id`: Customer account ID
+  - `date`: Date statistics were retrieved
+  - `direction`: Call direction (`out` for outgoing, `in` for incoming)
+  - `internal`: Whether the call was internal (between a customer's operators)
+  - `operator_id`: Operator ID
+  - `is_missed_call`: Whether the call was missed
+  - `calls_count`: Number of calls
+  - `call_duration`: Call duration (not including hold time)
+  - `total_call_duration`: Call duration (including hold time)
+
+- `telecom_clients_us.csv` (customers' data)
+  - `user_id`: User ID
+  - `tariff_plan`: Current customer rate
+  - `date_start`: Customer registration date
+
 
 Key questions:
 
-- Objectives to reach
-
-Project Info explanation
-
-__Note__: key info
+- Call duration
+- Call direction
+- Call type (internal or external)
+- Show the share of internal and external calls
+- Number of calls per day
 
 ---
 
-## 🧮 Data Dictionary
 
-This project has N different tables.
-
-- `dataset.csv` (describe content)
-    `column:name`: description.
 
 
 ---
