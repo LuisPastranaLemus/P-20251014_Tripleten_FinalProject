@@ -92,43 +92,27 @@ Download the test data, check if it was performed correctly, and analyze the res
 
 Data
 
-### Data
+- `ab_project_marketing_events_us.csv` (The marketing events calendar for 2020)
+  - `name`: The name of the marketing event
+  - `regions`: The regions where the advertising campaign will be run
+  - `start_dt`: The campaign start date
+  - `finish_dt`: Campaign end date
+  
+- `final_ab_new_users_upd_us.csv` (All users who registered in the online store from December 7 to 21, 2020)
+  - `user_id`: user identification
+  - `first_date`: Registration date
+  - `region`: user location
+  - `device`: Device used for registration
 
-- ab_project_marketing_events_us.csv
-- final_ab_new_users_upd_us.csv
-- final_ab_events_upd_us.csv
-- final_ab_participants_upd_us.csv
-
-- `ab_project_marketing_events_us.csv`: The marketing events calendar for 2020
-- `final_ab_new_users_upd_us.csv`: All users who registered in the online store from December 7 to 21, 2020
 - `final_ab_events_upd_us.csv`: All new user events from December 7, 2020, to January 1, 2021
+  - `user_id`: user identification
+  - `event_dt`: Date and time of the event
+  - `event_name`: Name of the event type
+  - `details`: Additional information about the event (e.g., the total order in USD for `purchase` events)
+  
 - `final_ab_participants_upd_us.csv`: Table with test participant data
-
-`ab_project_marketing_events_us.csv` structure:
-
-- `name`: The name of the marketing event
-- `regions`: The regions where the advertising campaign will be run
-- `start_dt`: The campaign start date
-- `finish_dt`: Campaign end date
-
-`final_ab_new_users_upd_us.csv` structure:
-
-- `user_id`
-- `first_date`: Registration date
-- `region`
-- `device`: Device used for registration
-
-`final_ab_events_upd_us.csv` structure:
-
-- `user_id`
-- `event_dt`: Date and time of the event
-- `event_name`: Name of the event type
-- `details`: Additional information about the event (e.g., the total order in USD for `purchase` events)
-
-`final_ab_participants_upd_us.csv` structure:
-
-- `user_id`
-- `ab_test`: Test name
+  - `user_id`: user identification
+  - `ab_test`: Test name
 
 ---
 
