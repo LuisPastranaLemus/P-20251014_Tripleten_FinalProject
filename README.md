@@ -90,7 +90,7 @@ Key questions:
 
 Download the test data, check if it was performed correctly, and analyze the results.
 
-Data
+🧮 Data Dictionary
 
 - `ab_project_marketing_events_us.csv` (The marketing events calendar for 2020)
   - `name`: The name of the marketing event
@@ -113,6 +113,87 @@ Data
 - `final_ab_participants_upd_us.csv`: Table with test participant data
   - `user_id`: user identification
   - `ab_test`: Test name
+
+Key questions:
+
+- Describe the objectives of the study.
+- Explore the data:
+  - Is it necessary to convert the rates?
+  - Are there any missing or duplicate values? If so, how would you characterize them?
+- Conduct exploratory data analysis:
+  - Study conversion at the different stages of the funnel.
+  - Is the number of events per user evenly distributed across the samples?
+  - Are there any users present in both samples?
+  - How is the number of events distributed across days?
+  - Are there any peculiarities in the data that need to be taken into account before starting the A/B test?
+- Evaluate the A/B test results:
+  - What can you say about the A/B test results?
+  - Use a z-test to test the statistical difference between the proportions.
+- Describe your conclusions regarding the EDA stage and the A/B test results.
+
+---
+
+3️⃣ SQL Management – The coronavirus took the entire world by surprise, changing everyone's daily routine. City dwellers were no longer spending their free time outside, going to cafes and shopping malls; instead, more people were staying home, reading books. This attracted the attention of startups, who rushed to develop new apps for book lovers.
+
+You've been given a database from one of the services competing in this market. It contains data on books, publishers, authors, and customer ratings and book reviews. This information will be used to generate a value proposition for a new product.
+
+🧮 Data Dictionary
+
+- `books` (Contains data about books)
+  - `book_id`: Book ID
+  - `author_id`: Author ID
+  - `title`: Title
+  - `num_pages`: Number of pages
+  - `publication_date`: Date of publication
+  - `publisher_id`: Publisher ID
+
+- `authors` (Contains data about authors)
+  - `author_id`: Author ID
+  - `author`: The author
+
+- `publishers` (Contains data about publishers)
+  - `publisher_id`: Publisher ID
+  - `publisher`: The publisher
+
+- `ratings` (Contains data about user ratings)
+  - `rating_id`: Rating ID
+  - `book_id`: Book ID
+  - `username`: The name of the user who reviewed the book book
+  - `rating`: rating
+
+- `reviews` (Contains data about customer reviews)
+  - `review_id`: review ID
+  - `book_id`: book ID
+  - `username`: the name of the user who reviewed the book
+  - `text`: the text of the review
+
+Instructions for Completing the Task
+
+- Describe the objectives of the study.
+- Study the tables (print the first rows).
+- Write an SQL query for each of the tasks.
+- Generate the results of each query in the Notebook.
+- Describe your conclusions for each of the tasks.
+
+Key questions:
+
+- Find the number of books published after January 1, 2000.
+- Find the number of user reviews and the average rating for each book.
+- Identify the publisher that has published the largest number of books with more than 50 pages (this will help you exclude pamphlets and similar publications from your analysis).
+- Identify the author with the highest average book rating: look only at books with at least 50 ratings.
+- Find the average number of full-text reviews among users who rated more than 50 books.
+
+__NOTES__
+- Don't forget about functions! They can make your life and query execution much easier.
+- Your results must be obtained with SQL. Use pandas only to print and store query results.
+  
+---
+
+The project will consist of three components:
+
+- A notebook with your code (.ipynb)
+- A presentation (.pdf)
+- A link to your dashboard in Tableau Public (`dashboard.txt`) (optional)
 
 ---
 
