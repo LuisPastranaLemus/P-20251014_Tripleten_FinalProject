@@ -160,6 +160,7 @@ def evaluate_central_trend(df, column):
             transform_suggestion += " For extreme skew or heavy-tailed distributions, consider quantile or normal score transforms instead of classical ones."
 
         display(HTML(f"> Suggested transformation: <i>{transform_suggestion}</i>"))
+        print()
     
     return 
 
@@ -1947,7 +1948,7 @@ def plot_horizontal_boxplot_plotlypx(data, column, title=None):
 
     fig = go.Figure()
 
-    # 1. Boxplot principal (solo datos sin outliers)
+    # 1. Main boxplot (data only without outliers)
     fig.add_trace(go.Box(
         x=non_outliers,
         y=['Data'] * len(non_outliers),
@@ -1959,7 +1960,7 @@ def plot_horizontal_boxplot_plotlypx(data, column, title=None):
         showlegend=False
     ))
 
-    # 2. Puntos normales
+    # 2. Normal points
     fig.add_trace(go.Scatter(
         x=non_outliers,
         y=['Data'] * len(non_outliers),
@@ -1979,7 +1980,7 @@ def plot_horizontal_boxplot_plotlypx(data, column, title=None):
         hoverinfo='x'
     ))
 
-    # 4. Media (rombo rojo)
+    # 4. Media (red diamond)
     fig.add_trace(go.Scatter(
         x=[mean_val],
         y=['Data'],
@@ -1991,7 +1992,7 @@ def plot_horizontal_boxplot_plotlypx(data, column, title=None):
         textfont=dict(color='red')
     ))
 
-    # 5. Mediana (rombo azul)
+    # 5. Median (blue diamond)
     fig.add_trace(go.Scatter(
         x=[median_val],
         y=['Data'],
@@ -2003,7 +2004,7 @@ def plot_horizontal_boxplot_plotlypx(data, column, title=None):
         textfont=dict(color='blue')
     ))
 
-    # 6. Líneas verticales para límites del IQR
+    # 6. Vertical lines for IQR limits
     fig.add_shape(type="line",
                   x0=lower_bound, y0=0.9,
                   x1=lower_bound, y1=1.1,
